@@ -4,6 +4,8 @@ import api.resenha.dorama.model.Dorama;
 import api.resenha.dorama.model.Genero;
 import api.resenha.dorama.model.Resenha;
 import api.resenha.dorama.model.Usuario;
+import api.resenha.dorama.service.DoramaService;
+import api.resenha.dorama.service.ResenhaService;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,10 +20,11 @@ public class Loader {
 
     public static void main(String[] args) {
         String filePath = "src/main/resources/dorama_data.txt";
+        DoramaService doramaService = new DoramaService();
+        ResenhaService resenhaService = new ResenhaService();
+
         Map<Long, Usuario> usuarios = new HashMap<>();
         Map<Long, Genero> generos = new HashMap<>();
-        List<Dorama> doramas = new ArrayList<>();
-        List<Resenha> resenhas = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -40,18 +43,20 @@ public class Loader {
                         Genero generoDorama = generos.get(Long.parseLong(data[4]));
                         Usuario usuarioDorama = usuarios.get(Long.parseLong(data[6]));
                         Dorama dorama = new Dorama(Long.parseLong(data[1]), data[2], data[3], generoDorama, Integer.parseInt(data[5]), new ArrayList<>(), usuarioDorama);
-                        doramas.add(dorama);
+                        doramaService.incluir(dorama);
                         break;
                     case "resenha":
                         Genero generoResenha = generos.get(Long.parseLong(data[6]));
                         Usuario usuarioResenha = usuarios.get(Long.parseLong(data[7]));
                         Resenha resenha = new Resenha(Long.parseLong(data[1]), data[2], data[3], Double.parseDouble(data[4]), LocalDateTime.parse(data[5]), generoResenha, usuarioResenha);
-                        resenhas.add(resenha);
+                        resenhaService.incluir(resenha);
 
-                        for (Dorama d : doramas) {
-                            if (d.getId().equals(Long.parseLong(data[7]))) {
-                                d.getResenhas().add(resenha);
-                            }
+                        Dorama doramaRelacionado = doramaService.obterLista().stream()
+                                .filter(d -> d.getId().equals(Long.parseLong(data[7])))
+                                .findFirst()
+                                .orElse(null);
+                        if (doramaRelacionado != null) {
+                            doramaRelacionado.getResenhas().add(resenha);
                         }
                         break;
                 }
@@ -60,9 +65,7 @@ public class Loader {
             e.printStackTrace();
         }
 
-        doramas.forEach(System.out::println);
-        resenhas.forEach(System.out::println);
-        usuarios.values().forEach(System.out::println);
-        generos.values().forEach(System.out::println);
+        doramaService.obterLista().forEach(System.out::println);
+        resenhaService.obterLista().forEach(System.out::println);
     }
 }
