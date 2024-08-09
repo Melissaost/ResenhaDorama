@@ -1,0 +1,6 @@
+Dorama:1,Lovely Runner,Descrição do Dorama 1,2023,1,1
+Dorama:2,Rainha das Lágrimas,Descrição do Dorama 2,2022,1,2
+Dorama:3,O que houve com a secretaria Kim,Descrição do Dorama 3,2021,1,3
+Resenha:1,Ótimo Dorama,Adorei o dorama,5,2024-08-01,melost
+Resenha:2,Interessante,Mas poderia ser melhor,4,2024-08-02,melost
+Resenha:3,Não gostei,Esperava mais,2,2024-08-03,carloslima

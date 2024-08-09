@@ -1,0 +1,15 @@
+# Dados dos Usuários
+usuario;1;João;joao123;joao@email.com;senha123;true
+usuario;2;Maria;maria456;maria@email.com;senha456;true
+
+# Dados dos Gêneros
+genero;1;Drama
+genero;2;Comédia
+
+# Dados dos Doramas
+dorama;1;Dorama 1;Descrição do Dorama 1;1;2024;1
+dorama;2;Dorama 2;Descrição do Dorama 2;2;2023;2
+
+# Dados das Resenhas
+resenha;1;Resenha 1;Conteúdo da Resenha 1;8.5;2024-08-09T10:00:00;1;1
+resenha;2;Resenha 2;Conteúdo da Resenha 2;7.0;2024-08-09T11:00:00;2;2

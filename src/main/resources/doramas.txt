@@ -1,0 +1,3 @@
+1,Lovely Runner,Descrição do Dorama 1,2023,1,1,Melissa Ost,melost,mel@email.com,senha123,true
+2,Rainha das Lágrimas,Descrição do Dorama 2,2022,1,1,Melissa Ost,melost,mel@email.com,senha123,true
+3,O que houve com a secretaria Kim,Descrição do Dorama 3,2021,1,2,Carlos Lima,carloslima,carlos.lima@example.com,senha789,false
