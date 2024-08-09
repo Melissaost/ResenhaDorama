@@ -47,7 +47,7 @@ public class Loader {
                         Usuario usuarioResenha = usuarios.get(Long.parseLong(data[7]));
                         Resenha resenha = new Resenha(Long.parseLong(data[1]), data[2], data[3], Double.parseDouble(data[4]), LocalDateTime.parse(data[5]), generoResenha, usuarioResenha);
                         resenhas.add(resenha);
-                        // Adiciona resenha ao dorama correspondente
+
                         for (Dorama d : doramas) {
                             if (d.getId().equals(Long.parseLong(data[7]))) {
                                 d.getResenhas().add(resenha);
@@ -60,7 +60,6 @@ public class Loader {
             e.printStackTrace();
         }
 
-        // Exemplo de impressão dos dados
         doramas.forEach(System.out::println);
         resenhas.forEach(System.out::println);
         usuarios.values().forEach(System.out::println);
