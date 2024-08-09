@@ -1,15 +1,15 @@
 # Dados dos Usuários
 usuario;1;João;joao123;joao@email.com;senha123;true
-usuario;2;Maria;maria456;maria@email.com;senha456;true
+usuario;2;Melissa;mel456;mel@email.com;senha456;true
 
 # Dados dos Gêneros
 genero;1;Drama
-genero;2;Comédia
+genero;2;Romance
 
 # Dados dos Doramas
-dorama;1;Dorama 1;Descrição do Dorama 1;1;2024;1
-dorama;2;Dorama 2;Descrição do Dorama 2;2;2023;2
+dorama;1;Lovely Runner;A série segue a jornada de Im Sol, uma grande fã do ídolo coreano Ryu Sun-jae. Sol, uma outrora promissora diretora de cinema cujos sonhos foram destruídos por um acidente que a deixou paralisada, encontra consolo nas músicas compostas por Sun-jae.;2;2024;2
+dorama;2;Rainha das Lágrimas;O dorama traz a história de Hae-in (Kim Ji-won), herdeira de um império de lojas de departamento chamado Queen Group, e Hyun-woo (Kim Soo-hyun), um diretor jurídico. Os dois se apaixonam e se casam. Porém, com o passar do tempo, Hyun-woo decide pedir o divórcio.;1;2023;2
 
 # Dados das Resenhas
-resenha;1;Resenha 1;Conteúdo da Resenha 1;8.5;2024-08-09T10:00:00;1;1
-resenha;2;Resenha 2;Conteúdo da Resenha 2;7.0;2024-08-09T11:00:00;2;2
+resenha;1;Adorável Corredora;Simplesmente incrivel o dorama.;4.5;2024-08-09T10:00:00;1;1
+resenha;2;Rainha das Lágrimas;Virei a própria rainha das lagrimas, amei.;5.0;2024-08-09T11:00:00;2;2
