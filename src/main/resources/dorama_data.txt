@@ -5,11 +5,17 @@ usuario;2;Melissa;mel456;mel@email.com;senha456;true
 # Dados dos Gêneros
 genero;1;Drama
 genero;2;Romance
+genero;3;Ação
+genero;4;Comédia
+genero;5;Terror
+
 
 # Dados dos Doramas
-dorama;1;Lovely Runner;A série segue a jornada de Im Sol, uma grande fã do ídolo coreano Ryu Sun-jae. Sol, uma outrora promissora diretora de cinema cujos sonhos foram destruídos por um acidente que a deixou paralisada, encontra consolo nas músicas compostas por Sun-jae.;2;2024;2
-dorama;2;Rainha das Lágrimas;O dorama traz a história de Hae-in (Kim Ji-won), herdeira de um império de lojas de departamento chamado Queen Group, e Hyun-woo (Kim Soo-hyun), um diretor jurídico. Os dois se apaixonam e se casam. Porém, com o passar do tempo, Hyun-woo decide pedir o divórcio.;1;2023;2
+dorama;1;Lovely Runner;A série segue a jornada de Im Sol, uma grande fã do ídolo coreano Ryu Sun-jae. Sol, uma outrora promissora diretora de cinema cujos sonhos foram destruídos por um acidente que a deixou paralisada, encontra consolo nas músicas compostas por Sun-jae.;2;2024;2;assets/imagens/lovelly-runner.jpg
+dorama;2;Rainha das Lágrimas;O dorama traz a história de Hae-in (Kim Ji-won), herdeira de um império de lojas de departamento chamado Queen Group, e Hyun-woo (Kim Soo-hyun), um diretor jurídico. Os dois se apaixonam e se casam. Porém, com o passar do tempo, Hyun-woo decide pedir o divórcio.;1;2023;2;assets/imagens/rainhadaslagrimas.jpg
+dorama;3;O que houve com a secretaria Kim;A série gira em torno do presidente narcisista de uma grande corporação, Lee Young-joon, e sua altamente capacitada secretária, Kim Mi-so. Mal-entendidos surgem quando ela anuncia que vai renunciar de sua posição, depois de trabalhar para Lee Young-joon por nove anos.;1;2018;2;assets/imagens/O-que-ha-de-errado-com-a-secretaria-Kim.png
 
 # Dados das Resenhas
 resenha;1;Adorável Corredora;Simplesmente incrivel o dorama.;4.5;2024-08-09T10:00:00;1;1
 resenha;2;Rainha das Lágrimas;Virei a própria rainha das lagrimas, amei.;5.0;2024-08-09T11:00:00;2;2
+resenha;3;Adorável Corredora;Melhor dorama, amei cada segundo. Eu amo dorama de passagem no tempo, acho que foi tudo bem abordado. O melhor de 2024 na minha opinião. ;5.0;2024-08-18T16:00:00;2;1

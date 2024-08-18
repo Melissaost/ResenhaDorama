@@ -1,5 +1,6 @@
 package api.resenha.dorama.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dorama {
@@ -9,16 +10,18 @@ public class Dorama {
     private String descricao;
     private Genero genero;
     private int anoDeLancamento;
+    private String imagem;
     private List<Resenha> resenhas;
     private Usuario usuario;
 
-    public Dorama(Long id, String titulo, String descricao, Genero genero, int anoDeLancamento, List<Resenha> resenhas, Usuario usuario) {
+    public Dorama(Long id, String titulo, String descricao, Genero genero, int anoDeLancamento, String imagem, List<Resenha> resenhas, Usuario usuario) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
         this.genero = genero;
         this.anoDeLancamento = anoDeLancamento;
-        this.resenhas = resenhas;
+        this.imagem = imagem;
+        this.resenhas = (resenhas != null) ? resenhas : new ArrayList<>();
         this.usuario = usuario;
     }
 
@@ -29,10 +32,19 @@ public class Dorama {
                 ", titulo='" + titulo + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", genero=" + genero.getGenero() +
-                ", anoDeLancamento=" + anoDeLancamento +
+                ", anoDeLancamento=" + anoDeLancamento + '\'' +
+                ", imagem='" + imagem + '\'' +
                 ", usuario=" + usuario.getNome() +
                 ", resenhas=" + resenhas +
                 '}';
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     public Long getId() {

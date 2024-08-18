@@ -9,8 +9,8 @@ public class Resenha {
     private String conteudo;
     private double nota;
     private LocalDateTime dataDaResenha;
-    private Genero genero;
     private Usuario usuario;
+    private Dorama dorama;
 
     @Override
     public String toString() {
@@ -20,19 +20,26 @@ public class Resenha {
                 ", conteudo='" + conteudo + '\'' +
                 ", nota=" + nota +
                 ", dataDaResenha=" + dataDaResenha +
-                ", genero=" + (genero != null ? genero.getGenero() : "null") +
                 ", usuario=" + (usuario != null ? usuario.getNome() : "null") +
                 '}';
     }
 
-    public Resenha(Long id, String titulo, String conteudo, double nota, LocalDateTime dataDaResenha, Genero genero, Usuario usuario) {
+    public Resenha(Long id, String titulo, String conteudo, double nota, LocalDateTime dataDaResenha, Usuario usuario, Dorama dorama) {
         this.id = id;
         this.titulo = titulo;
         this.conteudo = conteudo;
         this.nota = nota;
         this.dataDaResenha = dataDaResenha;
-        this.genero = genero;
         this.usuario = usuario;
+        this.dorama = dorama;
+    }
+
+    public Dorama getDorama() {
+        return dorama;
+    }
+
+    public void setDorama(Dorama dorama) {
+        this.dorama = dorama;
     }
 
     public Long getId() {
@@ -73,14 +80,6 @@ public class Resenha {
 
     public void setDataDaResenha(LocalDateTime dataDaResenha) {
         this.dataDaResenha = dataDaResenha;
-    }
-
-    public Genero getGenero() {
-        return genero;
-    }
-
-    public void setGenero(Genero genero) {
-        this.genero = genero;
     }
 
     public Usuario getUsuario() {
