@@ -1,0 +1,42 @@
+.card-busca {
+    width: 200px;
+    height: 500px;
+    background-color: #FEF7FF;
+    border-radius: 12px;
+}
+
+.card-busca img{
+    height: 280px;
+}
+
+.card-busca button {
+    width: 100%;
+}
+
+h3{
+    font-size: 16px;
+    text-align: center;
+    height: 50px;
+    display: block; /* Torna o elemento um bloco padrão */
+    overflow: hidden; /* Oculta o texto que excede o contêiner */
+    max-height: 50px; /* Define a altura máxima do contêiner */
+}
+
+p{
+    list-style: none;
+    padding: 0;
+    margin: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1D1B20;
+    text-align: center;
+}
+
+.descricao {
+    display: block; /* Torna o elemento um bloco padrão */
+    overflow: hidden; /* Oculta o texto que excede o contêiner */
+    max-height: 80px; /* Define a altura máxima do contêiner */
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+    line-height: 1.4; /* Ajusta a altura da linha (ajuste conforme necessário) */
+}

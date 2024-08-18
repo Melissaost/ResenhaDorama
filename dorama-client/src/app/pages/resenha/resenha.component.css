@@ -1,0 +1,6 @@
+.cads-resenhas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px; /* Espaçamento entre as linhas */
+    margin-bottom: 40px;
+}

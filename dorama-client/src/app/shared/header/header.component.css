@@ -1,0 +1,17 @@
+.app-header button{
+    margin: 0 16px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color:#8EA9C6;
+    color: white;
+    padding: 0 150px;
+}
+
+.mat-stroked-button:not(.mat-button-disabled) {
+    border-color: white;
+}

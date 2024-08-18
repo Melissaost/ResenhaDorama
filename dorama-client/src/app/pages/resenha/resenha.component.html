@@ -1,0 +1,3 @@
+<div class="card-resenha" *ngIf="resenhas">
+    <app-card-depoimento *ngFor="let item of resenhas" [resenha]="item"></app-card-depoimento>
+</div>

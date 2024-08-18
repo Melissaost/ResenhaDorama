@@ -1,0 +1,50 @@
+app-container{
+    padding: 50px;
+}
+.card-dorama {
+    padding: 50px;
+    background-color: #fdfbf4;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titulo{
+    margin-top: 20px;
+}
+
+.cads-resenhas {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-dorama div{
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-card-content {
+    padding: 50px; 
+    width: 100%;
+}
+
+.card-busca img{
+    height: 280px;
+}
+
+h3{
+    font-size: 16px;
+    text-align: center;
+    height: 50px;
+    display: block; /* Torna o elemento um bloco padrão */
+    overflow: hidden; /* Oculta o texto que excede o contêiner */
+    max-height: 50px; /* Define a altura máxima do contêiner */
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

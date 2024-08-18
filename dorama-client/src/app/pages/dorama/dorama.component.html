@@ -1,0 +1,23 @@
+<app-container>
+    <mat-card  class="card-dorama"  *ngIf="dorama"> 
+        <div>
+            <img  mat-card-image  
+            src="{{ dorama.imagem }}"
+            alt="{{ dorama.titulo }}"> 
+            <mat-card-content >
+                <h3>{{ dorama.titulo }}</h3>
+                <p class="descricao">{{ dorama.descricao }}</p>
+            </mat-card-content> 
+        </div>
+        <ul>
+            <!-- <li>Nota: {{ dorama.nota }}</li> -->
+            <li>Ano: {{ dorama.anoDeLancamento }}</li>
+            <li>Genero: {{ dorama.genero }}</li>
+        </ul>
+    </mat-card>
+
+    <p class="titulo">Resenhas:</p>
+    <div class="cads-resenhas" *ngIf="dorama">
+        <app-card-depoimento *ngFor="let item of dorama.resenhas" [resenha]="item"></app-card-depoimento>
+    </div>
+</app-container>

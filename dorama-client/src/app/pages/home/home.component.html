@@ -1,0 +1,11 @@
+<app-banner src="assets/imagens/banner-nosso-destino1.png"
+alt="Banner da aplicacao de doramas"></app-banner>
+<app-container>
+    <h2>Doramas</h2>
+    <div class="card-wrapper">
+        <app-card-busca  *ngFor="let item of listDorama" [dorama]="item"></app-card-busca>
+    </div>
+    <div class="card-resenha" *ngIf="resenhas">
+        <app-card-depoimento *ngFor="let item of resenhas" [resenha]="item"></app-card-depoimento>
+    </div>
+</app-container>

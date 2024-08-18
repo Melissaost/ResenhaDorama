@@ -1,0 +1,12 @@
+<mat-card  class="card-busca"> 
+    <img  mat-card-image  
+    src="{{ dorama.imagem }}"
+    alt="{{ dorama.titulo }}"> 
+    <mat-card-content >
+        <h3>{{ dorama.titulo }}</h3>
+        <p class="descricao">{{ dorama.descricao }}</p>
+    </mat-card-content > 
+    <mat-card-actions > 
+        <button mat-flat-button color="primary" (click)="verMais(dorama.id)">Ver Mais</button> 
+    </mat-card-actions > 
+</mat-card>

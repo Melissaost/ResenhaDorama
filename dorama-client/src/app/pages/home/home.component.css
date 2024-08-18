@@ -1,0 +1,14 @@
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
+    margin-bottom: 40px;
+}
+
+.cads-resenhas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px; /* Espaçamento entre as linhas */
+    margin-bottom: 40px;
+}
