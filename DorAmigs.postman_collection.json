@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "f43a5ab9-0fda-4a84-b981-9099b0daea21",
+		"name": "DorAmigs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19911943",
+		"_collection_link": "https://galactic-meadow-383457.postman.co/workspace/Solutis~9746d656-42dd-47e8-bc1b-7368a9b6e044/collection/19911943-f43a5ab9-0fda-4a84-b981-9099b0daea21?action=share&source=collection_link&creator=19911943"
+	},
+	"item": [
+		{
+			"name": "Dorama",
+			"item": [
+				{
+					"name": "Doramas por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/dorama/1",
+						"description": "Traz o dorama pelo id"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Dorama",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/dorama/1",
+						"description": "Deleta o dorama pelo id"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Dorama",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"titulo\": \"O Grande Desafio\",\r\n    \"descricao\": \"Uma série épica que explora os desafios e triunfos de um jovem lutador\",\r\n    \"idGenero\": 3,\r\n    \"anoDeLancamento\": 2024,\r\n    \"idUsuario\": 2,\r\n    \"imagem\": \"assets/imagens/Veneza.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/dorama",
+						"description": "Cria um dorama"
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de doramas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/dorama",
+						"description": "Traz a lista de doramas."
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de doramas ordenados-por-titulo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/dorama/ordenados-por-titulo",
+						"description": "Traz a lista de de doramas ordenada por titulo."
+					},
+					"response": []
+				}
+			],
+			"description": "Faz as requisições para o controller de doramas"
+		},
+		{
+			"name": "Resenha",
+			"item": [
+				{
+					"name": "Lista de resenhas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/resenhas",
+						"description": "Traz a lista de resenhas cadastradas."
+					},
+					"response": []
+				},
+				{
+					"name": "Resenha por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/resenhas/4",
+						"description": "Traz a resenha por id."
+					},
+					"response": []
+				},
+				{
+					"name": "buscarResenhasPorTituloDorama",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/resenhas/dorama/Lovely Runner",
+						"description": "Traz a resenha por titulo do dorama."
+					},
+					"response": []
+				},
+				{
+					"name": "buscarResenhasPorNomeUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/resenhas/usuario/João",
+						"description": "Traz a resenha por nome de usuario."
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Resenha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"titulo\": \"Amei\",\r\n  \"conteudo\": \"Dorama incrível, com muitas reviravoltas, você torce o tempo inteiro pelo casal. Amei\",\r\n  \"nota\": 4.5,\r\n  \"idUsuario\": 2,\r\n  \"idDorama\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/resenhas",
+						"description": "Inclui a resenha"
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Resenha",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/resenhas/1",
+						"description": "Deleta a resenha por id."
+					},
+					"response": []
+				}
+			],
+			"description": "Faz as requisições para o controller de Resenhas."
+		},
+		{
+			"name": "CEP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/ceps/23065480",
+				"description": "Traz as informações do cep."
+			},
+			"response": []
+		}
+	]
+}

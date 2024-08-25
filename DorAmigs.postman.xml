@@ -5,7 +5,7 @@
          <name>DorAmigs</name>
          <schema>https://schema.getpostman.com/json/collection/v2.0.0/collection.json</schema>
          <_exporter_id>19911943</_exporter_id>
-         <_collection_link>https://galactic-meadow-383457.postman.co/workspace/9746d656-42dd-47e8-bc1b-7368a9b6e044/collection/19911943-f43a5ab9-0fda-4a84-b981-9099b0daea21?action=share&source=collection_link&creator=19911943</_collection_link>
+         <_collection_link>https://galactic-meadow-383457.postman.co/workspace/Solutis~9746d656-42dd-47e8-bc1b-7368a9b6e044/collection/19911943-f43a5ab9-0fda-4a84-b981-9099b0daea21?action=share&source=collection_link&creator=19911943</_collection_link>
      </info>
      <item>
          <name>Dorama</name>
@@ -58,6 +58,14 @@
                  <description>Traz a lista de doramas.</description>
              </request>
          </item>
+         <item>
+             <name>Lista de doramas ordenados-por-titulo</name>
+             <request>
+                 <method>GET</method>
+                 <url>http://localhost:8080/dorama/ordenados-por-titulo</url>
+                 <description>Traz a lista de de doramas ordenada por titulo.</description>
+             </request>
+         </item>
          <description>Faz as requisições para o controller de doramas</description>
      </item>
      <item>
@@ -76,6 +84,22 @@
                  <method>GET</method>
                  <url>http://localhost:8080/api/resenhas/4</url>
                  <description>Traz a resenha por id.</description>
+             </request>
+         </item>
+         <item>
+             <name>buscarResenhasPorTituloDorama</name>
+             <request>
+                 <method>GET</method>
+                 <url>http://localhost:8080/api/resenhas/dorama/Lovely Runner</url>
+                 <description>Traz a resenha por titulo do dorama.</description>
+             </request>
+         </item>
+         <item>
+             <name>buscarResenhasPorNomeUsuario</name>
+             <request>
+                 <method>GET</method>
+                 <url>http://localhost:8080/api/resenhas/usuario/João</url>
+                 <description>Traz a resenha por nome de usuario.</description>
              </request>
          </item>
          <item>
@@ -111,5 +135,13 @@
              </request>
          </item>
          <description>Faz as requisições para o controller de Resenhas.</description>
+     </item>
+     <item>
+         <name>CEP</name>
+         <request>
+             <method>GET</method>
+             <url>http://localhost:8080/ceps/23065480</url>
+             <description>Traz as informações do cep.</description>
+         </request>
      </item>
  </root>
