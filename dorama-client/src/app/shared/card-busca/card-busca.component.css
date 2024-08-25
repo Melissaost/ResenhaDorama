@@ -1,8 +1,13 @@
 .card-busca {
     width: 200px;
     height: 500px;
-    background-color: #FEF7FF;
+    background-color:#FAE8E0;
     border-radius: 12px;
+}
+
+.button-ver-mais{
+    background-color: #EF7C8E;
+    color: white;
 }
 
 .card-busca img{

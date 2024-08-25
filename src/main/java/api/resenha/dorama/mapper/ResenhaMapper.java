@@ -10,8 +10,7 @@ import java.time.LocalDateTime;
 
 public interface ResenhaMapper {
 
-    static Resenha toEntity(ResenhaForm resenhaForm, Dorama dorama) {
-        Usuario usuario = Loader.usuarios.get(resenhaForm.idUsuario());
+    static Resenha toEntity(ResenhaForm resenhaForm, Dorama dorama, Usuario usuario) {
 
         return new Resenha(
                 resenhaForm.id(),

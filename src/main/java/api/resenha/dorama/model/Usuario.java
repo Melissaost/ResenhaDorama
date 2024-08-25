@@ -1,13 +1,30 @@
 package api.resenha.dorama.model;
 
+import jakarta.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import java.util.List;
+
+@Entity
 public class Usuario {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     private String nome;
     private String login;
+    @NotNull
     private String email;
+    @NotNull
     private String senha;
     private Boolean ativo;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Dorama> doramas;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Resenha> resenhas;
 
     public Usuario(Long id, String nome, String login, String email, String senha, Boolean ativo) {
         this.id = id;
@@ -16,6 +33,10 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
         this.ativo = ativo;
+    }
+
+    public Usuario() {
+
     }
 
     @Override

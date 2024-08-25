@@ -19,6 +19,16 @@ public class ResenhaController {
     @Autowired
     private ResenhaService resenhaService;
 
+    @GetMapping("/dorama/{titulo}")
+    public List<Resenha> buscarResenhasPorTituloDorama(@PathVariable String titulo) {
+        return resenhaService.buscarResenhasPorTituloDorama(titulo);
+    }
+
+    @GetMapping("/usuario/{nome}")
+    public List<Resenha> buscarResenhasPorNomeUsuario(@PathVariable String nome) {
+        return resenhaService.buscarResenhasPorNomeUsuario(nome);
+    }
+
     @PostMapping
     public ResponseEntity<ResenhaForm> incluir(@RequestBody ResenhaForm resenha) {
         resenhaService.incluirForm(resenha);

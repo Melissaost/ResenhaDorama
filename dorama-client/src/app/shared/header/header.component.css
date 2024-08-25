@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.app-header mat-toolbar{
+    border-bottom: solid 7px rgb(255, 255, 255, 0.5);
+}
+
+.logo{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22pt;
+}
+
 .app-header button{
     margin: 0 16px;
 }
@@ -7,7 +21,7 @@
 }
 
 .mat-toolbar {
-    background-color:#8EA9C6;
+    background-color:#D8A7B1;
     color: white;
     padding: 0 150px;
 }

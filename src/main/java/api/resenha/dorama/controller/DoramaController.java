@@ -20,6 +20,11 @@ public class DoramaController {
     @Autowired
     private DoramaService doramaService;
 
+    @GetMapping("/ordenados-por-titulo")
+    public List<Dorama> getAllDoramaSortedByTitulo() {
+        return doramaService.getAllDoramaSortedByTitulo();
+    }
+
     @PostMapping
     public ResponseEntity<DoramaForm> incluir(@RequestBody DoramaForm dorama) {
         doramaService.incluirForm(dorama);

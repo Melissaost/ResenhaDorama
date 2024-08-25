@@ -8,52 +8,66 @@ import api.resenha.dorama.model.Genero;
 import api.resenha.dorama.model.Resenha;
 import api.resenha.dorama.model.Usuario;
 import api.resenha.dorama.model.form.DoramaForm;
+import api.resenha.dorama.repository.DoramaRepository;
+import api.resenha.dorama.repository.GeneroRepository;
+import api.resenha.dorama.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class DoramaService {
 
-    private final Map<Long, Dorama> doramas = new HashMap<>();
+    @Autowired
+    private DoramaRepository doramaRepository;
+
+    @Autowired
+    private GeneroRepository generoRepository;
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    public List<Dorama> getAllDoramaSortedByTitulo() {
+        return doramaRepository.findAll(Sort.by(Sort.Order.asc("titulo")));
+    }
 
 
     public void incluir(Dorama dorama) {
-        doramas.put(dorama.getId(), dorama);
+        doramaRepository.save(dorama);
     }
 
     public void incluirForm(DoramaForm doramaForm) {
-        Dorama dorama = DoramaMapper.toEntity(doramaForm);
-        doramas.put(doramaForm.id(), dorama);
+        Genero genero = generoRepository.findById(doramaForm.idGenero())
+                .orElseThrow(() -> new IllegalArgumentException("Gênero não encontrado com ID: " + doramaForm.idGenero()));
+
+        Usuario usuario = usuarioRepository.findById(doramaForm.idUsuario())
+                .orElseThrow(() -> new IllegalArgumentException("Usuário não encontrado com ID: " + doramaForm.idUsuario()));
+
+
+        Dorama dorama = DoramaMapper.toEntity(doramaForm, genero, usuario);
+        doramaRepository.save(dorama);
     }
 
     public Collection<Dorama> obterLista() {
-        return doramas.values();
+        return doramaRepository.findAll();
     }
 
     public List<DoramaDto> obterListaDto() {
-        Collection<Dorama> doramasList = doramas.values();
+        Collection<Dorama> doramasList = doramaRepository.findAll();
         return doramasList.stream().map(DoramaDto::new).toList();
     }
 
     public DoramaResenhaDto obterPorId(Long id) {
-        Dorama dorama = doramas.get(id);
-        if (dorama != null) {
-            return new DoramaResenhaDto(dorama);
-        } else {
-            return null;
-        }
+        return new DoramaResenhaDto(Objects.requireNonNull(doramaRepository.findById(id).orElse(null)));
     }
 
     public Dorama obterPorIdDorama(Long id) {
-        return doramas.get(id);
+        return doramaRepository.findById(id).orElse(null);
     }
 
     public void excluir(Long id) {
-        doramas.remove(id);
+        doramaRepository.deleteById(id);
     }
 }
